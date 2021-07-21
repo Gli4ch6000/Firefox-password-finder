@@ -1,21 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-# Based on original work from: www.dumpzilla.org
-
 from __future__ import annotations
 
 import argparse
@@ -45,14 +28,6 @@ DEFAULT_ENCODING = "utf-8"
 
 PWStore = list[dict[str, str]]
 
-# NOTE: In 1.0.0-rc1 we tried to use locale information to encode/decode
-# content passed to NSS. This was an attempt to address the encoding issues
-# affecting Windows. However after additional testing Python now also defaults
-# to UTF-8 for encoding.
-# Some of the limitations of Windows have to do with poor support for UTF-8
-# characters in cmd.exe. Terminal - https://github.com/microsoft/terminal or
-# a Bash shell such as Git Bash - https://git-scm.com/downloads are known to
-# provide a better user experience and are therefore recommended
 
 
 def get_version() -> str:
